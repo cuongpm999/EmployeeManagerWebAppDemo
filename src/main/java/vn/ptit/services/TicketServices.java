@@ -43,7 +43,7 @@ public class TicketServices {
 	public List<Ticket> searchByType(String inputTypeSearch, Date from, Date to) {
 		String jpql = "select p from Ticket p where ";
 		if (!inputTypeSearch.isEmpty()) {
-			jpql += "p.mobileClient like '%" + inputTypeSearch + "%' or p.department.name like '%" + inputTypeSearch
+			jpql += "lower(p.mobileClient) like '%" + inputTypeSearch.toLowerCase() + "%' or lower(p.department.name) like '%" + inputTypeSearch.toLowerCase()
 					+ "%'";
 			Query query = entityManager.createQuery(jpql, Ticket.class);
 			return query.getResultList();
