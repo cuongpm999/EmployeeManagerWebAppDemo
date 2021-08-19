@@ -31,7 +31,7 @@ public class DepartmentServices {
 	public List<Department> searchByName(String input) {
 		String jpql = "select p from Department p where ";
 		if (!input.isEmpty()) {
-			jpql += "p.name like '%" + input + "%'";
+			jpql += "lower(p.name) like '%" + input.toLowerCase() + "%'";
 			
 		}
 		
