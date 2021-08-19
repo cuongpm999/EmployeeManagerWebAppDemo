@@ -1,0 +1,14 @@
+.container-form{
+	width: 500px;
+	margin: auto;
+	margin-top: 180px;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+.container-form .container-link{
+	display: flex;
+	justify-content: space-between;
+}
