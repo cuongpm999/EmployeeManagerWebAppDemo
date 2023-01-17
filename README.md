@@ -1,6 +1,6 @@
 # Employee Manager Web App
 
-Demo web quản lý nhân viên
+Demo web quản lý nhân viên với các chức năng cơ bản
 
 ## Kiến trúc
 - Dùng kiến trúc Layered Architecture
